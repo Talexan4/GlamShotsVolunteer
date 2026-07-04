@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Volunteer Admin</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="page-header">
+        <h1>Volunteer Admin</h1>
+        <p>Manage volunteer sign-ups from Firestore.</p>
+        <a href="index.html" class="secondary-link">Back to sign-up form</a>
+    </header>
+
+    <main class="admin-page">
+        <section class="controls">
+            <input type="search" id="searchInput" placeholder="Search by name, email, or role">
+            <select id="roleFilter">
+                <option value="">All roles</option>
+                <option value="photographer">Photographer</option>
+                <option value="hair-stylist">Hair Stylist</option>
+                <option value="makeup-artist">Makeup Artist</option>
+                <option value="nail-technician">Nail Technician</option>
+                <option value="general">General</option>
+            </select>
+            <button id="refreshButton" type="button">Refresh</button>
+        </section>
+
+        <section id="statusMessage" class="status-message" aria-live="polite"></section>
+
+        <section id="editPanel" class="edit-panel hidden">
+            <h2>Edit volunteer</h2>
+            <form id="editForm">
+                <input type="hidden" id="editDocId">
+                <label for="editFirstName">First name</label>
+                <input type="text" id="editFirstName" required>
+
+                <label for="editLastName">Last name</label>
+                <input type="text" id="editLastName" required>
+
+                <label for="editEmail">Email</label>
+                <input type="email" id="editEmail" required>
+
+                <label for="editPhone">Phone</label>
+                <input type="tel" id="editPhone">
+
+                <label for="editRole">Volunteer role</label>
+                <select id="editRole" required>
+                    <option value="">Select a role</option>
+                    <option value="photographer">Photographer</option>
+                    <option value="hair-stylist">Hair Stylist</option>
+                    <option value="makeup-artist">Makeup Artist</option>
+                    <option value="nail-technician">Nail Technician</option>
+                    <option value="general">General</option>
+                </select>
+
+                <label for="editAvailability">Availability</label>
+                <input type="text" id="editAvailability" placeholder="weekdays, weekends, evenings">
+
+                <div class="form-actions">
+                    <button type="submit">Save changes</button>
+                    <button type="button" id="cancelEdit">Cancel</button>
+                </div>
+            </form>
+        </section>
+
+        <div class="table-wrapper">
+            <table>
+                <thead>
+                    <tr>
+                        <th>First name</th>
+                        <th>Last name</th>
+                        <th>Email</th>
+                        <th>Phone</th>
+                        <th>Volunteer role</th>
+                        <th>Availability</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="volunteerTableBody"></tbody>
+            </table>
+        </div>
+    </main>
+
+    <script src="https://www.gstatic.com/firebasejs/10.9.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.9.0/firebase-firestore-compat.js"></script>
+    <script src="admin.js"></script>
+</body>
+</html>
