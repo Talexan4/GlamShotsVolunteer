@@ -4,6 +4,8 @@ body {
     padding: 20px;
     background-color: #f9f9f9;
     color: #333;
+    font-size: 16px;
+    line-height: 1.5;
 }
 
 header {
@@ -13,11 +15,13 @@ header {
 
 form {
     max-width: 500px;
+    width: 100%;
     margin: 0 auto;
     background: white;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
 }
 
 label {
@@ -91,6 +95,42 @@ button:hover {
     gap: 12px;
     flex-wrap: wrap;
     margin-bottom: 16px;
+    align-items: center;
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 12px;
+        font-size: 15px;
+    }
+
+    form {
+        padding: 16px;
+    }
+
+    .controls {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .controls input,
+    .controls select,
+    .controls button,
+    .edit-panel input,
+    .edit-panel select,
+    .edit-panel button {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .form-actions {
+        flex-direction: column;
+    }
+
+    th, td {
+        padding: 8px;
+        font-size: 14px;
+    }
 }
 
 .controls input,
