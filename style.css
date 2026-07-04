@@ -220,12 +220,22 @@ th {
 
 @media (max-width: 768px) {
     body {
-        padding: 6px;
+        padding: 4px;
         font-size: 15px;
     }
 
     header {
-        margin-bottom: 12px;
+        margin-bottom: 8px;
+    }
+
+    header h1 {
+        font-size: 1.25rem;
+        margin: 0;
+    }
+
+    header p {
+        margin: 4px 0 0;
+        font-size: 0.9rem;
     }
 
     main {
@@ -236,19 +246,48 @@ th {
     }
 
     form {
-        padding: 14px;
+        padding: 12px;
         width: 100%;
         max-width: 100%;
         margin: 0;
-        border-radius: 12px;
-        min-height: auto;
-        height: auto;
+        border-radius: 8px;
+    }
+
+    label {
+        margin-top: 12px;
+        margin-bottom: 6px;
+        font-size: 0.95rem;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="number"],
+    select,
+    textarea {
+        padding: 14px 12px;
+        margin-bottom: 12px;
+        font-size: 16px;
+        border: 1px solid #bbb;
+    }
+
+    .checkbox-group {
+        margin-bottom: 12px;
     }
 
     .checkbox-group label {
         display: block;
         margin-right: 0;
-        margin-bottom: 6px;
+        margin-bottom: 8px;
+        font-size: 0.95rem;
+    }
+
+    button {
+        width: 100%;
+        padding: 16px 14px;
+        font-size: 16px;
+        min-height: 48px;
+        margin-top: 14px;
     }
 
     .controls {
@@ -275,6 +314,7 @@ th {
         font-size: 14px;
     }
 }
+
 
 @media (max-width: 480px) {
     body {
