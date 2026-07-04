@@ -1,4 +1,11 @@
-<<<<<<< HEAD
+:root {
+    color-scheme: light;
+}
+
+* {
+    box-sizing: border-box;
+}
+
 html, body {
     width: 100%;
     min-height: 100%;
@@ -13,8 +20,6 @@ body {
     font-size: 16px;
     line-height: 1.5;
     padding: 20px;
-    box-sizing: border-box;
-    width: 100%;
     max-width: 100%;
     overflow-x: hidden;
     min-height: 100vh;
@@ -27,21 +32,25 @@ header {
     margin-bottom: 20px;
 }
 
-form {
-    max-width: 500px;
-    width: 100%;
-    margin: 0 auto;
-    background: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    box-sizing: border-box;
+header h1 {
+    margin: 0 0 8px;
+    font-size: clamp(1.5rem, 4vw, 2rem);
 }
 
 main {
     width: 100%;
     display: block;
     max-width: 100%;
+}
+
+form {
+    max-width: 520px;
+    width: 100%;
+    margin: 0 auto;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 label {
@@ -54,13 +63,15 @@ label {
 input[type="text"],
 input[type="email"],
 input[type="tel"],
+input[type="number"],
+select,
 textarea {
     width: 100%;
-    padding: 8px;
+    padding: 10px 12px;
     margin-bottom: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
-    box-sizing: border-box;
+    font-size: 16px;
 }
 
 input[type="checkbox"] {
@@ -75,17 +86,21 @@ input[type="checkbox"] {
     display: inline-block;
     font-weight: normal;
     margin-right: 15px;
+    margin-bottom: 6px;
 }
 
 button {
     display: block;
+    width: 100%;
     margin: 20px auto 0;
     background-color: #d81b60;
     color: white;
     border: none;
-    padding: 10px 15px;
+    padding: 12px 16px;
     border-radius: 4px;
     cursor: pointer;
+    font-size: 16px;
+    min-height: 44px;
 }
 
 button:hover {
@@ -116,74 +131,6 @@ button:hover {
     flex-wrap: wrap;
     margin-bottom: 16px;
     align-items: center;
-}
-
-@media (max-width: 768px) {
-    html, body {
-        width: 100%;
-        overflow-x: hidden;
-    }
-
-    body {
-        padding: 12px;
-        font-size: 15px;
-        max-width: 100vw;
-        box-sizing: border-box;
-    }
-
-    header {
-        margin-bottom: 16px;
-    }
-
-    main {
-        width: 100%;
-        max-width: 100%;
-        display: block;
-    }
-
-    form {
-        padding: 16px;
-        width: 100%;
-        max-width: 100%;
-        margin: 0;
-    }
-
-    .checkbox-group label {
-        display: block;
-        margin-right: 0;
-        margin-bottom: 6px;
-    }
-
-    button {
-        width: 100%;
-        padding: 12px 14px;
-        font-size: 16px;
-        min-height: 44px;
-    }
-
-    .controls {
-        flex-direction: column;
-        align-items: stretch;
-    }
-
-    .controls input,
-    .controls select,
-    .controls button,
-    .edit-panel input,
-    .edit-panel select,
-    .edit-panel button {
-        width: 100%;
-        box-sizing: border-box;
-    }
-
-    .form-actions {
-        flex-direction: column;
-    }
-
-    th, td {
-        padding: 8px;
-        font-size: 14px;
-    }
 }
 
 .controls input,
@@ -270,147 +217,15 @@ th {
     gap: 10px;
     margin-top: 10px;
 }
-=======
-html, body {
-    width: 100%;
-    min-height: 100%;
-    margin: 0;
-    padding: 0;
-}
-
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f9f9f9;
-    color: #333;
-    font-size: 16px;
-    line-height: 1.5;
-    padding: 20px;
-    box-sizing: border-box;
-    width: 100%;
-    max-width: 100%;
-    overflow-x: hidden;
-    min-height: 100vh;
-    -webkit-text-size-adjust: 100%;
-    text-size-adjust: 100%;
-}
-
-header {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-form {
-    max-width: 500px;
-    width: 100%;
-    margin: 0 auto;
-    background: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    box-sizing: border-box;
-}
-
-main {
-    width: 100%;
-    display: block;
-    max-width: 100%;
-}
-
-label {
-    display: block;
-    margin-top: 10px;
-    margin-bottom: 5px;
-    font-weight: bold;
-}
-
-input[type="text"],
-input[type="email"],
-input[type="tel"],
-textarea {
-    width: 100%;
-    padding: 8px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-}
-
-input[type="checkbox"] {
-    margin-right: 8px;
-}
-
-.checkbox-group {
-    margin-bottom: 10px;
-}
-
-.checkbox-group label {
-    display: inline-block;
-    font-weight: normal;
-    margin-right: 15px;
-}
-
-button {
-    display: block;
-    margin: 20px auto 0;
-    background-color: #d81b60;
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #c2185b;
-}
-
-.page-header {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.secondary-link {
-    display: inline-block;
-    margin-top: 8px;
-    color: #d81b60;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.admin-page {
-    max-width: 1100px;
-    margin: 0 auto;
-}
-
-.controls {
-    display: flex;
-    gap: 12px;
-    flex-wrap: wrap;
-    margin-bottom: 16px;
-    align-items: center;
-}
 
 @media (max-width: 768px) {
-    html, body {
-        width: 100%;
-        overflow-x: hidden;
-    }
-
     body {
-        padding: 12px;
+        padding: 10px 8px 20px;
         font-size: 15px;
-        max-width: 100vw;
-        box-sizing: border-box;
     }
 
     header {
         margin-bottom: 16px;
-    }
-
-    main {
-        width: 100%;
-        max-width: 100%;
-        display: block;
     }
 
     form {
@@ -418,19 +233,13 @@ button:hover {
         width: 100%;
         max-width: 100%;
         margin: 0;
+        border-radius: 12px;
     }
 
     .checkbox-group label {
         display: block;
         margin-right: 0;
         margin-bottom: 6px;
-    }
-
-    button {
-        width: 100%;
-        padding: 12px 14px;
-        font-size: 16px;
-        min-height: 44px;
     }
 
     .controls {
@@ -458,88 +267,35 @@ button:hover {
     }
 }
 
-.controls input,
-.controls select,
-.controls button,
-.edit-panel input,
-.edit-panel select,
-.edit-panel button {
-    padding: 8px 10px;
-    border-radius: 4px;
-    border: 1px solid #ccc;
-}
+@media (max-width: 480px) {
+    body {
+        padding: 6px;
+    }
 
-.table-wrapper {
-    overflow-x: auto;
-    background: white;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-}
+    header p {
+        font-size: 0.95rem;
+    }
 
-table {
-    width: 100%;
-    border-collapse: collapse;
-}
+    form {
+        padding: 14px;
+    }
 
-th, td {
-    padding: 10px;
-    border-bottom: 1px solid #eee;
-    text-align: left;
-}
+    label {
+        font-size: 0.95rem;
+    }
 
-th {
-    background: #f5f5f5;
-}
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="number"],
+    select,
+    textarea {
+        padding: 11px 12px;
+        font-size: 16px;
+    }
 
-.edit-btn, .delete-btn {
-    margin-right: 6px;
-    padding: 6px 10px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
+    button {
+        padding: 13px 14px;
+        font-size: 16px;
+    }
 }
-
-.edit-btn {
-    background: #1976d2;
-    color: white;
-}
-
-.delete-btn {
-    background: #d32f2f;
-    color: white;
-}
-
-.status-message {
-    margin-bottom: 12px;
-    padding: 10px;
-    border-radius: 4px;
-}
-
-.status-message.success {
-    background: #e8f5e9;
-    color: #2e7d32;
-}
-
-.status-message.error {
-    background: #ffebee;
-    color: #c62828;
-}
-
-.edit-panel {
-    background: white;
-    padding: 16px;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    margin-bottom: 16px;
-}
-
-.hidden {
-    display: none;
-}
-
-.form-actions {
-    display: flex;
-    gap: 10px;
-    margin-top: 10px;
-}
->>>>>>> e88c4c2fda0979190b53e1897cbd7275c4775580
